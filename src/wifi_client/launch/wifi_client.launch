@@ -1,0 +1,4 @@
+<launch> 
+	<node pkg="wifi_client" type="wifi_client.py" name="client" output="screen" respawn="true"> 
+	</node>	
+</launch>

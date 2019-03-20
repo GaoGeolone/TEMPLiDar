@@ -1,0 +1,4 @@
+<!---This is for use of the rosopencv launch-->
+<launch>
+	<node name="mpu_imu_node" pkg="mpu_imu" type="mpu_imu_node" output="log"/>
+</launch>

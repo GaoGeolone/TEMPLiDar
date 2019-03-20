@@ -1,0 +1,12 @@
+<launch> 
+<!--第1个节点 loam_velodyne catch picture with camera--> 
+	<include file="$(find loam_velodyne)/launch/hector_loam_velodyne.launch"/>>
+<!--第2个节点 imageprocess deal with the mass with the detection--> 
+<include file="$(find rfans_driver)/launch/node_manager.launch">
+<!--		<arg name="gcs_url" value="$(arg gcs_url)"/>  --> 
+</include>
+<!--第3个节点 this node is used for transform mavlink mesg--> 
+	<include file="$(find mpu_imu)/launch/mpu_imu.launch">
+<!--		<arg name="gcs_url" value="$(arg gcs_url)"/>  --> 
+	</include>
+</launch>

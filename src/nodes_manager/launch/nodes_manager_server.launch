@@ -1,0 +1,9 @@
+<launch> 
+<arg name="rviz" default="true" /> 
+<!--第1个节点 loam_velodyne catch picture with camera--> 
+  <group if="$(arg rviz)">
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find loam_velodyne)/rviz_cfg/loam_velodyne.rviz" />
+  </group>
+	<include file="$(find wifi_server)/launch/wifi_server.launch">
+	</include>
+</launch>
